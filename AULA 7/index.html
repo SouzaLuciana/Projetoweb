@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página inicial-Final</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navegação">
+            <img src="4202060_swift_logo_social_social media_icon.png" alt="logo" width="32px" height="32px">
+            <nav class="nav-desktop">
+                <!--Esses links normalmente são no rodapé-->
+                <!--E não na navegação-->
+                <a href="mailto:luciana.souza16@senacsp.edu.br">E-mail</a>
+                <a href="tel:+551993970375">Telefone</a>
+                <a href="https://wa.me/+5511993970375">WhatsApp</a>
+                <a href="./cadastro.html">Cadastro</a>
+            </nav>
+            <div class="pesquisa">
+                <input type="text" placeholder="Pesquisa">
+                <button>
+                    <img src="4202060_swift_logo_social_social media_icon.png" alt="Pesquisa" width="16px"
+                        height="16px">
+                </button>
+            </div>
+            <div class="usuario">
+                <button>
+                    <img src="https://www.iconfinder.com/icons/6853732/arriver_entrer_escalator_man_on_stairs_visitor_icon"
+                        width="16px" height="16px" alt="usuario">
+                    Entrar
+                </button>
+                <button onclick="location.href='./cadastro.html'">
+                    <img src="https://cdn2.iconfinder.com/data/icons/people-80/96/Picture5-512.png" widht="16px"
+                        height="16px" alt="cadastro">
+                    Cadastro
+                </button>
+            </div>
+            <!--Criando um checkbox oculto para o menu hamburguer-->
+            <!--ID é dar um nome ao elemento-->
+            <input type="checkbox" id="menu-escondido" class="menu-escondido">
+            <!--Desenho o hamburguer-->
+            <label for="menu-escondido" class="hamburguer">
+                <span class="linha linha1"></span>
+                <span class="linha linha2"></span>
+                <span class="linha linha3"></span>
+            </label>
+            <ul class="menu">
+                <li>
+                    <a href="mailto:luciana.souza16@senacsp.edu.br">E-mail</a>
+                </li>
+                <li>
+                    <a href="tel:+551993970375">Telefone</a>
+                </li>
+                <li>
+                    <a href="https://wa.me/+5511993970375">WhatsApp</a>
+                </li>
+                <li>
+                    <a href="./cadastro.html">Cadastro</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="carrosel">
+            <div class="imagem-fundo"></div>
+            <button class="seta esquerda">
+                <img width="32px" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-left-c-256.png" alt="esquerda">
+            </button>
+            <h1>Conheça os nossos principais produtos</h1>
+            <button class="seta">
+                <img width="32px" src="https://cdn2.iconfinder.com/data/icons/css-vol-1/24/arrow-right-256.png" alt="direita">
+                </button>
+        </div>
+            <div class="contendo">
+                <div class="card">
+                    <img src="./img/img pexels.jpg" width="100%">
+                    <h3>Ghost Face</h3>
+                    <p>Ghost Face, em referência á franquia panico, é uma
+                        máscara icônica usada por vários assasinos que se tornam
+                        uma figura central do terror, não sendo um personagem
+                        único, mas uma identidade fictícia.</p>
+                    <a href="">Saiba mais</a>
+                </div>
+                <div class="card">
+                    <img src="./img/img pexels.jpg" width="100%">
+                    <h3>Ghost Face</h3>
+                    <p>Ghost Face, em referência á franquia panico, é uma
+                        máscara icônica usada por vários assasinos que se tornam
+                        uma figura central do terror, não sendo um personagem
+                        único, mas uma identidade fictícia.</p>
+                    <a href="">Saiba mais</a>
+                </div>
+                <div class="card">
+                    <img src="./img/img pexels.jpg" width="100%">
+                    <h3>Ghost Face</h3>
+                    <p>Ghost Face, em referência á franquia panico, é uma
+                        máscara icônica usada por vários assasinos que se tornam
+                        uma figura central do terror, não sendo um personagem
+                        único, mas uma identidade fictícia.</p>
+                    <a href="">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

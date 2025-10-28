@@ -1,0 +1,326 @@
+/*Estou atribuindo a todos elementos essa propriedade*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Atribuindo valores que serão reutilizados*/
+:root {
+  --cor-de-fundo: rgb(8, 94, 29);
+  /*Definindo cor de fundo*/
+  --cor-de-letra: rgb(138, 89, 139);
+  /*Definindo cor de letra*/
+}
+
+/*Estou atribuindo a todos os elementos essa propriedade*/
+* {
+  margin: 0;
+  /*Espaço interno*/
+  padding: 0;
+  /*Espaço externo*/
+  color: pink var(--cor-de-letra);
+  /*Cor das letras do html*/
+}
+
+body {
+  padding-top: 128px;
+  background-color: rgb(18, 26, 2) var(--cor-de-fundo);
+  /*Define a cor de fundo de uma */
+display: flex;
+
+.carrosel{
+  width: 100%;
+  height: 384px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url (https://static.wikia.nocookie.net/mundo-animal/images/b/b2/%C3%81guia.jpg/revision/latest?cb=20140412235628&path-prefix=pt);
+  background-repeat: cover;
+  background-position: 50%; /*Quanto o tamanho original da imagem fica visivel*/
+  opacity: 25%; /*Transparencia dos elementos dentro da caixa*/
+}
+.imagem-fundo{
+  background-image: url(https://www.lancerural.com.br/wp-content/uploads/2018/05/Tr%C3%AAs-Seis-2.jpg);
+  background-repeat: cover;
+  background-position: 50%; /* Quanto o tamanho original da imagem fica visivel*/
+  opacity: 25%; /*Transparencia dos elementos dentro da caixa*/
+  position: absolute; /* Pega as propriedades do fundo do pai*/
+  width: 100%;
+  height: 384px; 
+}
+.seta{
+  background-color: transparent;
+  z-index: 1000;
+}
+.esquerda{
+  transform: rotate(180deg);
+}
+.seta:hover{
+  background-color: blue;
+}
+/* Familia de elementos, onde será usada a classe */
+.controle {
+  padding-top: 16px;
+  /* Espaço externo a cima */
+  padding-bottom: 16px;
+  /* Espaço externo a baixo */
+  background-color: rgb(64, 35, 83) var(--cor-de-letra);
+  color: rgb(10, 65, 102) var(--cor-de-fundo);
+  border-radius: 15px;
+  /* Borda radiana ou circular */
+  width: 100%;
+  /* Tamanho do elemento em relação a largura */
+}
+
+/* Definindo um espaço entre os descendentes*/
+.controle>form div {
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding-top: 8px;
+  padding-left: 4px;
+  padding-bottom: 8px;
+  border: 1px solid#234d26;
+  /* Aplicando uma borda com um estilo especifico*/
+  border-radius: 4px;
+}
+
+textarea {
+  resize: none;
+  /*Desabilita a edição do tamanho do campo textarea*/
+}
+
+fieldset {
+  border: 1px solid green;
+  border-radius: 4px;
+}
+
+h1 {
+  color: rgb(79, 39, 87);
+  /* Define a cor de fundo de um texto */
+  font-size: 2vw;
+  /* Define o tamanho do texto */
+}
+
+.contendo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /*Informo que a caixa será dividida em linha*/
+  flex-wrap: wrap;
+  /*Informe se o elemento não encaixar, vai para linha
+    de baixo*/
+  border-radius: 4px;
+  max-width: 1088px;
+  /*O tamanho maximo que esse elemento pode ter*/
+}
+
+.card {
+  width: 256px;
+  margin: 4px 8px 4px 8px;
+  background-color: var(--cor-de-letra);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+.card>a {
+  width: 80px;
+  text-decoration: none;
+  text-align: center;
+  color: black var(--cor-de-letra);
+  padding: 8px 0px 8px 0px;
+  background-color: rgb(0, 255, 136);
+  border-radius: 16px;
+}
+
+.card>a:hover {
+  background-color: black;
+}
+
+header {
+  width: 100%;
+  height: 64px;
+  background-color: black;
+  /* Fixa o no cabeçalho no topo da tela*/
+  position: fixed;
+  /*Informe em qual posição ficará fixa*/
+  /* Em cima*/
+  top: 0px;
+  /*Esquerda*/
+  left: 0px;
+  /*Direita*/
+  right: 0px;
+  /*Vou garantir que o cabeçalho está acima dos demais elementos da pag*/
+  z-index: 1000;
+}
+
+.navegação {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  color: black;
+  /* Posição relativa ao pai(header), principal quando ocultar o menu*/
+  position: relative;
+}
+
+/*Estiliza os elementos a dentro de nav-desktop*/
+.nav-desktop a {
+  color: white;
+  text-decoration: none;
+  margin: 0px 10 px;
+  font-size: 16px;
+}
+
+.nav-desktop a:hover {
+  color: #dc232d;
+}
+
+.navegação .pesquisa {
+  display: flex;
+  align-items: center;
+  background-color: black var(--cor-de-letra);
+  border-radius: 8px;
+}
+
+.pesquisa input {
+  width: auto;
+  padding: 4px;
+  border: none;
+  border-radius: 4px;
+}
+
+.pesquisa button {
+  background-color: #444;
+  border: none;
+  border-radius: 4px;
+}
+
+.menu-escondido,
+.menu {
+  /*Esconder o checkbox e o menu*/
+  display: none;
+}
+
+.linha {
+  /*Faz com que cada linha ocupe seu próprio espaço*/
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--cor-de-letra);
+  border-radius: 4px;
+  /*Anima todas as propriedades que mudam em 0.3s*/
+  transition: all 0.3s ease-in-out;
+}
+
+.menu {
+  max-height: 0px;
+  /*Esconde o conteúdo que transborda quando o menu está fechado*/
+  overflow: hidden;
+  /*Anima a abertura/fechamento do menu*/
+  transition: max-height 0.4s ease-in-out;
+  list-style: none;
+  /*Posiciona o menu em relação ao seu ancestral mais proximo(.navegação)*/
+  position: absolute;
+  /*Posiciona o menu lateral abaixo do cabeçalho*/
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(77, 42, 175, 0.75);
+  padding: 0px;
+  /*Posição em relação ao demais elementos(-1 a atrás, 1000 a frente)*/
+  z-index: 1000;
+}
+
+.menu li {
+  text-align: center;
+}
+
+.menu li a {
+  color: var(--cor-de-letra);
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 16px;
+}
+
+.menu li a:hover {
+  color: #dc232d;
+}
+
+/*Quando o usuario tocar no menu, vai estilizar (dar peso) ao seu irmão
+ (menu)*/
+.menu-escondido:checked~.menu {
+  max-height: 500px;
+  padding: 8px 0;
+}
+
+.menu-escondido:checked~.hamburguer .linha1 {
+  /*Transformando as linhas para um X*/
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.menu-escondido:checked~.hamburguer .linha2 {
+  /*Transformando o elemento invisivel*/
+  opacity: 0;
+}
+
+.menu-escondido:checked~.hamburguer .linha3 {
+  /*Transformando as linhas para um X*/
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+@media (max-width: 800px) {
+  .seta{
+    width: auto;
+  }
+  .seta:hover{
+    background-color: #ff4a4a;
+  }
+  .card {
+    width: 100%;
+    margin: 4px 8px 4px 8px;
+    background-color: var(--cor-de-letra);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 8px;
+  }
+
+  .nav-desktop,
+  .usuario button span {
+    /*Removendo o peso dos elementos*/
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .hamburguer {
+    /*Mostra o cursor de mão*/
+    cursor: pointer;
+    /*Adiciona um espaçamento de 8px*/
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 32px;
+    height: 32px;
+  }
+
+  .hamburguer:hover .linha {
+    background-color: #dc232d;
+  }
+}
